@@ -22,6 +22,16 @@ public class Lab11avst
     public static void computePrimes(boolean primes[])
     {
         System.out.println("\nCOMPUTING PRIME NUMBERS");
+        for(int N=0; N< primes.length; N++){
+            primes[N]
+            System.out.println(primes[N]);
+
+
+        }
+
+
+
+
 
     }
 
