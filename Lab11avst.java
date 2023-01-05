@@ -12,49 +12,38 @@ public class Lab11avst
     {
         // This main method needs additions for the 100 point version.
         Scanner input = new Scanner(System.in);
-        final int MAX = 100;
+
+        final int MAX = 100 ;
         boolean primes[];
         primes = new boolean[MAX];
         computePrimes(primes);
         displayPrimes(primes);
     }
 
-    public static void computePrimes(boolean primes[])
-    {
+    public static void computePrimes(boolean primes[]){
+
         System.out.println("\nCOMPUTING PRIME NUMBERS");
+
 
         for(int N=2; N< primes.length; N++) {
             primes[N] = true;
-            System.out.print(primes[N]);
-        }
-
-
-
-
-            //Step 2 : Removing multiples of primes
-            // Hint: Nested Loop
-        for(int k =2; k< primes.length; k*=2){
-           primes[k] = false;
+            for(int a = 2; a< primes.length; a++) {
+                for (int k = a * 2; k < primes.length; k += a) {
+                    primes[k]=false;
+                }
+            }
 
         }
-
         }
-
-
-
-
-
-
-
     public static void displayPrimes(boolean primes[]) {
         System.out.println("\n\nPRIMES BETWEEN 1 AND " + primes.length);
         System.out.println();
 
         for (int N = 2; N < primes.length; N++) {
             //check if prime is true
-
-
+            if (primes[N]==true){
                 System.out.print(N + " ");
+            }
 
 
             }
