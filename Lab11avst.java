@@ -12,8 +12,10 @@ public class Lab11avst
     {
         // This main method needs additions for the 100 point version.
         Scanner input = new Scanner(System.in);
+        System.out.print("Enter the primes upper bounds---->");
+        int l = input.nextInt();
+        final int MAX = l ;
 
-        final int MAX = 100 ;
         boolean primes[];
         primes = new boolean[MAX];
         computePrimes(primes);
@@ -21,7 +23,6 @@ public class Lab11avst
     }
 
     public static void computePrimes(boolean primes[]){
-
         System.out.println("\nCOMPUTING PRIME NUMBERS");
 
 
