@@ -39,11 +39,20 @@ public class Lab11avst
     public static void displayPrimes(boolean primes[]) {
         System.out.println("\n\nPRIMES BETWEEN 1 AND " + primes.length);
         System.out.println();
-
+        int counter = 0;
         for (int N = 2; N < primes.length; N++) {
             //check if prime is true
-            if (primes[N]==true){
+            if (primes[N]==true) {
                 System.out.print(N + " ");
+                counter++;
+                if (counter == 15) {
+                    counter = 0;
+                    System.out.println();
+                }
+            }
+
+
+
             }
 
 
@@ -51,7 +60,7 @@ public class Lab11avst
 
 
         }
-    }
+
 
 
 
